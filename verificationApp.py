@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import requests
 import logging
 
@@ -40,6 +40,12 @@ def get_orders():
             return []
 
     return orders
+
+
+@app.route('/')
+def status_page():
+    """Serve the status page."""
+    return render_template('status.html')
 
 
 @app.route('/verify-subscription', methods=['POST'])
