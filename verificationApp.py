@@ -1,4 +1,4 @@
-from application import Flask, request, jsonify
+from verificationApp import Flask, request, jsonify
 import requests
 import logging
 
